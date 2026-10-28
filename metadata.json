@@ -1,0 +1,6 @@
+{
+  "name": "HomeDecor Shop - Nội Thất Cao Cấp",
+  "description": "Website thương mại điện tử chuyên đồ nội thất và trang trí nhà cửa cao cấp chuẩn bị triển khai Cloudflare Workers & D1 Database.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

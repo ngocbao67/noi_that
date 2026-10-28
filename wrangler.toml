@@ -1,0 +1,28 @@
+# ==============================================================================
+# CLOUDFLARE WORKERS & D1 CONFIGURATION
+# ĐỒ ÁN ĐIỆN TOÁN ĐÁM MÂY: HOMEDECOR SHOP
+# ==============================================================================
+
+name = "homedecor-shop"
+main = "worker/entry.py"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["python_workers"]
+
+# Cấu hình Workers Static Assets phục vụ Single Page Application (React Vite)
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# Liên kết Cơ sở dữ liệu Cloudflare D1 (SQLite)
+[[d1_databases]]
+binding = "DB"
+database_name = "homedecor-db"
+database_id = "e9418e52-06b1-47d5-a845-ab06355ce486"
+
+# Biến môi trường công khai
+[vars]
+ENVIRONMENT = "production"
+APP_NAME = "HomeDecor Shop"
+CURRENCY = "VND"
+FREE_SHIPPING_THRESHOLD = "3000000"
